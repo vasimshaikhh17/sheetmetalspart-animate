@@ -1,23 +1,41 @@
 import React from "react";
-import "./App.css";
+import ShuffleHero from "./ShuffleHero";
+import Example from "./Example";
+import { TextParallaxContentExample } from "./TextParallaxContentExample";
+import { ShiftingDropDown } from "./ShiftingDropDown";
+import { Example2 } from "./Example2";
+import ParticlesContainer from "./ParticlesContainer";
+import { HoverImageLinks } from "./HoverImageLinks";
 
-import paralleximg from "./asset/parallexmain.png";
-import TextMain from "./Components/TextMain";
-import { Route, Routes } from "react-router-dom";
-import Product from "./Components/Product";
-import ParticlesContainer from "./Components/ParticlesContainer";
+import IconSideNav from "./IconSideNav";
+import TextMain from "./TextMain";
+import { Example3 } from "./Example3";
+import Products from "./Products";
+import ImageGallery from "./ImageGallery";
+import Contact from "./Contact";
+import Navbar from "./Components/Navbar";
+
 const App = () => {
   return (
     <>
+      <div>
+        <Navbar/>
+        {/* <ShiftingDropDown/>  */}
+        {/* <IconSideNav/> */}
+        <TextMain />
+        {/* <ShuffleHero /> */}
+        {/* <Contact/> */}
 
-      <ParticlesContainer/>
-    <Routes>
-    <Route path="/product" element={<Product/>}/>
-    <Route path="/" element={<TextMain/>}/>
-    </Routes>
-  
-    
- 
+        <ShuffleHero />
+        <Example2 />
+        <Example />
+        {/* <TextParallaxContentExample/> */}
+        <HoverImageLinks />
+        <Example3 />
+        <Products />
+        <ImageGallery />
+      </div>
+      <ParticlesContainer />
     </>
   );
 };
